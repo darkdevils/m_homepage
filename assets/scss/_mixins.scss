@@ -1,0 +1,81 @@
+
+
+
+@mixin imageUrl($imgUrl, $type) {
+    background: url("../image/" + $imgUrl +"." + $type) no-repeat;
+}
+
+@mixin imageSizeW($imageW) {
+    width: $imageW/2;
+}
+@mixin imageSizeH($imageH) {
+    height: $imageH/2;
+}
+@mixin positionTop ($posTop) {
+    top: $posTop/2;
+}
+@mixin positionLeft ($posLeft) {
+    left: $posLeft/2;
+}
+@mixin fontSize ($fontSize) {
+    font-size : $fontSize/2;
+}
+
+@mixin margin ($marginTop: 0,$marginRight: 0,$marginBottom: 0,$marginLeft: 0) {
+    margin: $marginTop/2 $marginRight/2 $marginBottom/2 $marginLeft/2;
+}
+
+@mixin padding ($paddingTop: 0,$paddingRight: 0,$paddingBottom: 0,$paddingLeft: 0) {
+    padding: $paddingTop/2 $paddingRight/2 $paddingBottom/2 $paddingLeft/2;
+}
+
+// Box sizing
+@mixin box-sizing($boxmodel) {
+    -webkit-box-sizing: $boxmodel;
+    -moz-box-sizing: $boxmodel;
+    box-sizing: $boxmodel;
+}
+
+@mixin translate($x, $y) {
+    -webkit-transform: translate($x, $y);
+    -ms-transform: translate($x, $y); // IE9 only
+    -o-transform: translate($x, $y);
+    transform: translate($x, $y);
+}
+@mixin translate3d($x, $y, $z) {
+    -webkit-transform: translate3d($x, $y, $z);
+    transform: translate3d($x, $y, $z);
+}
+@mixin rotate($degrees) {
+    -webkit-transform: rotate($degrees);
+    -ms-transform: rotate($degrees); // IE9 only
+    -o-transform: rotate($degrees);
+    transform: rotate($degrees);
+}
+@mixin rotateX($degrees) {
+    -webkit-transform: rotateX($degrees);
+    -ms-transform: rotateX($degrees); // IE9 only
+    -o-transform: rotateX($degrees);
+    transform: rotateX($degrees);
+}
+@mixin rotateY($degrees) {
+    -webkit-transform: rotateY($degrees);
+    -ms-transform: rotateY($degrees); // IE9 only
+    -o-transform: rotateY($degrees);
+    transform: rotateY($degrees);
+}
+
+// Transitions
+
+@mixin transition($transition...) {
+    -webkit-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+}
+
+@mixin transition-transform($transition...) {
+    -webkit-transition: -webkit-transform $transition;
+    -moz-transition: -moz-transform $transition;
+    -o-transition: -o-transform $transition;
+    transition: transform $transition;
+}

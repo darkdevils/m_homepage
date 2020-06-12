@@ -1,0 +1,531 @@
+:root {
+    --subWrap-life: #00C691;
+    --life-font-color: #fff;
+    --vwSize : 0.1389vw;
+}
+
+.subWrap--life {
+    position: relative;
+    background: var(--subWrap-life);
+    * {
+        color: var(--life-font-color);
+    }
+    .logo__svg {
+        fill: #fff;
+    }
+    header {
+        nav {
+            .menu {
+                background: var(--subWrap-life);
+                .line {
+                    border-color: #fff;
+                }
+            }
+        }
+    }
+
+    .rightTopYellowBox {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: calc( 80 * 0.1389vw );
+        height: calc( 263 * 0.1389vw );
+        background: #FFE232;
+        z-index: 1;
+        &:after {
+            content: "";
+            position: absolute;
+            left: -30px;
+            bottom: -18px;
+            @include imageUrl(sub/life_topbg,png);
+            background-size: cover;
+            width: calc( 99px / 2 );
+            height: calc( 99px / 2 );
+        }
+    }
+}
+.subWrap__life {
+    .textBig {
+        position: absolute;
+        .big {
+            position: relative;
+            @include fontSize(107px);
+            font-weight: bold;
+            color: #FFE232;
+        }
+        .textSamll {
+            position: absolute;
+            @include fontSize(15px);
+        }
+        &--s {
+            left: -10px;
+            @include positionTop(143px);
+            .textSamll {
+                bottom: 15px;
+                left: 23px;
+            }
+        }
+        &--x {
+            left: -10px;
+            @include positionTop(254px);
+            @include positionLeft(93px);
+            .textSamll {
+                bottom: 15px;
+                left: 30px;
+            }
+        }
+        &--p {
+            left: -10px;
+            @include positionTop(211px);
+            @include positionLeft(199px);
+            .big {
+                display: inline-block;
+                @include rotate(90deg);
+            }
+            .textSamll {
+                top: 11px;
+                left: 0;
+            }
+        }
+    }
+    .lifeText {
+        @include margin(370px,0,0,0);
+        @include padding(0,20px,0,0);
+        text-align: right;
+        span {
+            position: relative;
+        }
+        * {
+            @include fontSize(40px);
+            font-weight: bold;
+            line-height: 1.7em;
+        }
+        em {
+            position: relative;
+            &:after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 1px;
+                background: #fff;
+            }
+        }
+    }
+    .videoPhoto {
+        position: relative;
+        @include padding(176px,0,0,0);
+        &__image {
+            position: absolute;
+            left: -21px;
+            bottom: 0;
+            z-index: 1;
+            img {
+                width: 305px;
+            }
+        }
+        &__animateBox {
+            position: relative;
+            background: #C7CBD9;
+            width: calc(586 * var(--vwSize));
+            height: calc(280 * var(--vwSize));
+            &:after {
+                content: "";
+                position: absolute;
+                right: calc(-26 * var(--vwSize));
+                top: 0;
+                width: calc(26 * var(--vwSize));
+                height: calc(280 * var(--vwSize));
+                background: #FFE232;
+            }
+        }
+    }
+    .xtLogo {
+        position: relative;
+        height: calc(308 * var(--vwSize));
+        &__yellowBox {
+            position: absolute;
+            right: 66.5px;
+            top: 0;
+            background: #FFE232;
+            width: calc(70 * var(--vwSize));
+            height: calc(308 * var(--vwSize));
+        }
+        &__img {
+            position: relative;
+            text-align: right;
+            display: inline-block;
+            z-index: 2;
+            @include margin(0, 66px,0,0);
+            img {
+                width: calc( 100% / 2 );
+            }
+        }
+        &__textImg {
+            position: absolute;
+            left: 20px;
+            bottom: 20px;
+            img {
+                width: calc( 100% / 2 );
+            }
+        }
+    }
+
+    .swiperArea {
+        position: relative;
+        height: calc(700 * var(--vwSize));
+        @include padding(0,80px,0,80px);
+        .border {
+            position: absolute;
+            width: calc(560 * var(--vwSize));
+            height: calc(700 * var(--vwSize));
+            left: 50%;
+            margin: 0 0 0 calc((-560 * var(--vwSize)) / 2) ;
+            z-index: 2;
+            span {
+                display: block;
+                &:after,&:before {
+                    content: "";
+                    position: absolute;
+                    visibility: visible;
+                }
+            }
+            .top {
+                &:after {
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    border-top: 10px solid #fff;
+                }
+                &:before {
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    border-left: 10px solid #fff;
+                }
+            }
+            .bottom {
+                &:after {
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    border-top: 10px solid #fff;
+                }
+                &:before {
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    border-left: 10px solid #fff;
+                }
+            }
+        }
+        .swiper-container {
+            position: relative;
+            height: calc(700 * var(--vwSize));
+        }
+        .swiper-pagination {
+            right: calc(134 * var(--vwSize));
+            bottom: -4px;
+            &-bullet {
+                width:  15px;
+                height: 25px;
+                background: #FFE232;
+                margin-right: 5px;
+                border-radius: 0;
+                opacity: 1;
+                transition: 1s ease;
+                -webkit-transform: scaleY(1);
+                transform: scaleY(1);
+                &-active {
+                    position: relative;
+                    -webkit-animation: scale-up-ver-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+                    animation: scale-up-ver-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+                }
+            }
+        }
+    }
+
+    .xtText {
+        @include padding(60px,0,0,110px);
+        > * {
+            @include fontSize(30px);
+        }
+        strong {
+            font-weight: bold;
+        }
+    }
+
+    .xtWorkLife {
+        position: relative;
+        @include padding(240px,0,0,0);
+        text-align: right;
+        &:after,&:before {
+            content: "";
+            position: absolute;
+        }
+        &:after {
+            @include imageUrl(sub/life_bg,png);
+            background-size: cover;
+            width: 300px;
+            height: calc(305px / 2);
+            left:-50%;
+            top: 20px;
+        }
+        &:before {
+            @include imageUrl(sub/life_bg2,png);
+            background-size: cover;
+            width: calc(77px / 2);
+            height: calc(90px / 2);
+            right: 20px;
+            top: 245px;
+        }
+        .title {
+            display: inline-block;
+            @include padding(0,85px,0,0);
+            span {
+                @include fontSize(120px);
+                font-weight: 700;
+            }
+        }
+        .text {
+            @include margin(40px,0,0,0);
+            @include padding(0,80px,0,0);
+            * {
+                @include fontSize(32px);
+                font-weight: 700;
+                line-height: 1.8em;
+            }
+            span {
+                position: relative;
+                em {
+                    position: relative;
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        width: 100%;
+                        height: 1px;
+                        background: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    .xtMember {
+        &__team {
+            overflow: hidden;
+            &__position {
+                position: relative;
+                display: block;
+                @include margin(176px,0,20px,0);
+                overflow: hidden;
+                strong {
+                    @include fontSize(124px);
+                    font-weight: 700;
+                    color: #FFE232;
+                }
+                .icon {
+                    svg {
+                        position: relative;
+                        top: -7px;
+                        width: 31px;
+                        height: 31px;
+                    }
+                }
+                &.ceo-cto {
+                    @include margin(126px,0,0,0);
+                    strong {
+                        float: right;
+                    }
+                }
+                .positionBar {
+                    position: absolute;
+                    top: 42px;
+                    display: block;
+                    width: calc(340 * var(--vwSize));
+                    height: 7px;
+                    mix-blend-mode: hard-light;
+                    transition: .5s ease;
+                }
+                &.planner {
+                    .positionBar {
+                        right: 0;
+                        background: #3742DB;
+                        transform: translate(100%,0);
+                    }
+                }
+                &.designer {
+                    strong  {
+                        float: right;
+                    }
+                    .positionBar {
+                        left: 0;
+                        background: #00BF6C;
+                        transform: translate(-100%,0);
+                    }
+                }
+                &.publisher {
+                    .positionBar {
+                        right: 0;
+                        background: #AF45D5;
+                        transform: translate(100%,0);
+                    }
+                }
+                &.develover {
+                    .positionBar {
+                        left: 0;
+                        background: #AF45D5;
+                        transform: translate(-100%,0);
+                    }
+                }
+            }
+
+            &__photo {
+                position: relative;
+                &:after {
+                    content: "";
+                    clear: both;
+                    display: block;
+                }
+                > div {
+                    position: relative;
+                    width: calc(380 * var(--vwSize));
+                    height: calc(260 * var(--vwSize));
+                    background: #38E1B3;
+                }
+                .photo {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    img {
+                        position: absolute;
+                        bottom: 0;
+                        width: 100%;
+                    }
+                }
+                .animationBar {
+                    position: absolute;
+                    width: calc(280 * var(--vwSize));
+                    bottom: 22px;
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        bottom: -6px;
+                        width: calc(280 * var(--vwSize));
+                        height: 4px;
+                        background: #fff;
+                    }
+                }
+                &__type1 {
+                    float: left;
+                    border-radius: 0 10px 10px 0;
+                    @include margin(0,0,-50px,0);
+                    .animationBar {
+                        left: 0;
+                        &:after {
+                            left :0;
+                        }
+                    }
+                }
+                &__type2 {
+                    float: right;
+                    border-radius: 10px 0 0 10px;
+                    @include margin(0,0,-50px,0);
+                    .animationBar {
+                        right: 0;
+                        text-align: right;
+                        &:after {
+                            right :0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .xtsienLifeText {
+        @include padding(182px, 0 ,0 , 80px);
+        .title {
+            position: relative;
+            display: block;
+            &:after {
+                content: "";
+                position: absolute;
+                right: 32%;
+                top: 12px;
+                @include imageUrl(sub/bg_life,png);
+                background-size: cover;
+                width: calc(270px / 2);
+                height: calc(192px / 2);
+            }
+            span {
+                position: relative;
+                @include fontSize(80px);
+                font-weight: 500;
+                z-index: 2;
+            }
+        }
+        .bigText {
+            display: block;
+            @include margin(40px,0,0,0);
+            span {
+                @include fontSize(40px);
+                font-weight: 700;
+            }
+        }
+        p {
+            @include margin(45px,0,77px,0);
+            span {
+                @include fontSize(20px);
+                line-height: 1.8em;
+            }
+        }
+    }
+    .xtMemberLiefPhoto {
+        ul {
+            @include padding(0, 64px, 0, 64px);
+            overflow: hidden;
+            li {
+                float: left;
+                width: 50%;
+                @include padding(0, 16px, 32px, 16px);
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .contactXt {
+        * {
+            color: #000;
+            fill: #00C691;
+        }
+    }
+}
+
+@-webkit-keyframes scale-up-ver-center {
+    0% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+
+    100% {
+        -webkit-transform: scaleY(2);
+        transform: scaleY(2);
+    }
+}
+
+@keyframes scale-up-ver-center {
+    0% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+
+    100% {
+        -webkit-transform: scaleY(2);
+        transform: scaleY(2);
+    }
+}

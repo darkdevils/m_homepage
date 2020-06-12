@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>XT  News View</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<div class="layerWrap" style="display: none">
+    <!-- menu -->
+    <div class="menuWrap">
+        <button type="button" class="btnClose"><span class="blind">닫기</span></button>
+        <ul>
+            <li><a href="#"><span>XT</span></a></li>
+            <li><a href="#"><span>Works</span></a></li>
+            <li><a href="#"><span>XTSIEN Life</span></a></li>
+            <li><a href="#"><span>Contact</span></a></li>
+            <li><a href="#"><span>News</span></a></li>
+        </ul>
+        <div class="downPdf"><a href="#">Download XT</a><a href="#">profile pdf</a></div>
+    </div>
+    <!-- //menu -->
+    <div class="layerBg"></div>
+</div>
+
+<div class="layerWrap">
+    <button type="button" class="btnClose"><span class="blind">닫기</span></button>
+    <p class="bigText">엑스티는 당신다움을<br>함께 탐험할 준비가<br>되어있어요</p>
+    <div class="formWrap">
+        <div class="input-field">
+            <input type="text" id="test1" required><label for="test1">회사명</label>
+        </div>
+        <div class="input-field">
+            <input type="text" id="name" required><label for="name">이름</label>
+        </div>
+        <div class="input-field">
+            <input type="email" id="test2" required><label for="test2">이메일</label>
+        </div>
+        <div class="input-field">
+            <input type="tel" id="test3" required><label for="test3">연락처</label>
+        </div>
+        <div class="selectWrap">
+            <select name="">
+                <option value="">서비스 분야를 선택해주세요</option>
+            </select>
+        </div>
+        <div class="selectWrap">
+            <select name="">
+                <option value="">예산을 선택헤주세요</option>
+            </select>
+        </div>
+        <textarea name="" cols="30" rows="10" class="textArea">프로제특 내용을 설명해주세요</textarea>
+        <div class="filebox">
+            <!--<input class="upload-name" value="파일 택" disabled="disabled">-->
+            <input class="upload-name" value="파일 업로드,최대 10MB"></input>
+            <label for="fileName"><span class="icon">업로드</span></label>
+            <input type="file" id="fileName" class="upload-hidden">
+        </div>
+        <div class="checkboxWrap">
+            <input type="checkbox" name="" id="ck1"><label for="ck1"><span>개인정보보호정책에</span> 동의합니다</label>
+        </div>
+        <a href="#" class="btn"><span>프로젝트 문의하기</span></a>
+    </div>
+    <div class="downPdf"><a href="#">Download XT</a><a href="#">profile pdf</a></div>
+</div>
+
+<script src="../static/plugins/jquery/jquery-3.4.1.min.js"></script>
+<script src="../static/plugins/swiper/swiper.js"></script>
+
+<script>
+$(function(){
+    $(document).ready(function(){
+        var fileTarget = $('.filebox .upload-hidden');
+        fileTarget.on('change', function(){
+            if(window.FileReader){  // modern browser
+                var filename = $(this)[0].files[0].name;
+            } else { // old IE
+                var filename = $(this).val().split('/').pop().split('\\').pop();
+            }
+
+            // 추출한 파일명 삽입
+            $(this).siblings('.upload-name').val(filename);
+        });
+    });
+});
+</script>
+
+</body>
+</html>

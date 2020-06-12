@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>XT</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="pages">
+        <!-- 동영상 화면 -->
+        <div class="section page"  data-type="background" data-speed="10">
+            <!-- 동영상 나오는 부분 이미지로 대처중 -->
+            <div class="img"><img src="../assets/image/temp/visual_them01.png" alt=""></div>
+            <!-- //동영상 나오는 부분 이미지로 대처중 -->
+        </div>
+        <!-- //동영상 화면 -->
+
+        <!-- GROWING XT -->
+        <div class="section page"  data-type="background" data-speed="10">
+            <div class="section__body">
+                <div class="slider">
+                    <div class="swiper-slide">
+                        <strong>GROWING<br>XT <span>Expert X Empathetic </span></strong>
+                        <p>우리는 당신 고객을 가장 잘 알고 싶습니다<br>열린사고로 미리 판단하지 않고<br>당신 고객의 입장에서 생각하고 공감하며<br>가장 당신 고객다운 모습을 집요하게 분석하고<br> 이성적인 분석을 바탕으로 창의적이면서도<br>논리적인 UIUX 설계합니다 </p>
+                    </div>
+                    <div class="swiper-slide">
+                        <strong>GROWING<br>XT <span>2222</span></strong>
+                        <p>우리는 당신 고객을 가장 잘 알고 싶습니다<br>열린사고로 미리 판단하지 않고<br>당신 고객의 입장에서 생각하고 공감하며<br>가장 당신 고객다운 모습을 집요하게 분석하고<br> 이성적인 분석을 바탕으로 창의적이면서도<br>논리적인 UIUX 설계합니다 </p>
+                    </div>
+                    <div class="swiper-slide">
+                        <strong>GROWING<br>XT <span>3333</span></strong>
+                        <p>우리는 당신 고객을 가장 잘 알고 싶습니다<br>열린사고로 미리 판단하지 않고<br>당신 고객의 입장에서 생각하고 공감하며<br>가장 당신 고객다운 모습을 집요하게 분석하고<br> 이성적인 분석을 바탕으로 창의적이면서도<br>논리적인 UIUX 설계합니다 </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //GROWING XT -->
+
+        <!-- Project List -->
+        <div class="section page">
+            <div class="section__body">
+                test3
+            </div>
+        </div>
+        <!-- //Project List -->
+
+        <!-- view XTSIEN Life -->
+        <div class="section page">
+            <div class="section-body">
+                test4
+            </div>
+        </div>
+        <!-- //view XTSIEN Life -->
+
+        <!-- Contact XT -->
+        <div class="section page">
+            <div class="section-body">
+                test5
+            </div>
+        </div>
+        <!-- //Contact XT -->
+    </div>
+</div>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+
+<script src="../static/plugins/jquery/jquery-3.4.1.min.js"></script>
+<script src="../static/plugins/fullpage/parallax.js"></script>
+<!--<script src="../static/plugins/swiper/swiper.js"></script>-->
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<script src="../static/plugins/TweenMax/TweenMax.min.js"></script>
+<script>
+    $(function(){
+        $('.pages').parallax({
+            direction: 'vertical',
+            swipeAnim: 'cover',
+            drag:      true,
+            loading:   true,
+            indicator: true,
+            arrow:     true,
+            onchange: function(index, element, direction) {
+                // code here...
+                // console.log(index, element, direction);
+                $('.slider').bxSlider({
+                    auto: false,
+                    pager: false,
+                    controls: false
+                });
+            },
+            /*
+             * {String}		orientation: landscape、protrait
+             */
+            orientationchange: function(orientation) {
+                // console.log(orientation);
+            }
+        });
+
+    })
+
+
+
+</script>
+</body>
+</html>

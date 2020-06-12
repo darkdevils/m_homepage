@@ -1,0 +1,117 @@
+
+.subWrap--works {
+    .subWrap__works__text {
+        @include padding(177px,0,0,80px);
+        span, i {
+            @include fontSize(40px);
+            font-weight: 700;
+            line-height: 1.8em;
+        }
+        i {
+            position: relative;
+            font-style: normal;
+            &:after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 1px;
+                background: #000;
+            }
+        }
+    }
+    .subWrap__works__text2 {
+        @include padding($paddingLeft: 75px);
+        span {
+            display: inline-block;
+            color: #ebebeb;
+            transform: rotate(180deg);
+            @include fontSize(70px);
+        }
+    }
+    .video {
+        @include margin(64px, 0, 178px, 0);
+    }
+    .projectList {
+        position: relative;
+        svg {
+            @include margin(0,0,0,53px);
+            width: calc(56.669px / 2);
+        }
+        &__img {
+            position: relative;
+            &:after {
+                content: "";
+                position: absolute;
+                left: 39px;
+                top: -20px;
+                width: 1px;
+                height: 100%;
+                background: #b3b3b3;
+            }
+            @include padding(0,40px,0,40px);
+            li {
+                a {
+                    display: block;
+                    @include padding($paddingBottom: 160px);
+                    .img {
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    .text {
+                        position: relative;
+                        @include margin(-20px,0,0,124px);
+                        .year {
+                            position: absolute;
+                            left : -78px;
+                            top: 50px;
+                            display: block;
+                            background: #fff;
+                            padding: 0 10px;
+                            transform: rotate(-90deg);
+                            z-index: 2;
+
+                        }
+                        .title {
+                            display: inline-block;
+                            @include fontSize(28px);
+                            @include margin(0,0,13px,0);
+                            font-weight: 500;
+                        }
+                        strong {
+                            display: inline-block;
+                            @include fontSize(48px);
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+        &__text {
+            @include padding(0,40px,0,40px);
+            li {
+                display: flex;
+                @include padding(50px,40px,35px,40px);
+                border-top: 1px solid #e2e2e2;
+                &:first-child {
+                    border: 0;
+                }
+                .corporate {
+                    @include padding($paddingLeft: 125px);
+                    dl {
+                        dt {
+                            @include fontSize(32px);
+                        }
+                        dd {
+                            margin-top: 5px;
+                            @include padding(5px,0,30px,0);
+                            @include fontSize(24px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

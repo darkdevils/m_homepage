@@ -1,0 +1,84 @@
+
+.subWrap__newsList {
+    @include padding(80px, 40px, 0, 40px);
+    &__item {
+        @include margin($marginBottom: 150px);
+        .img {
+            @include margin($marginBottom: -30px);
+            img {
+                width: 100%;
+            }
+        }
+        .title {
+            @include padding($paddingLeft: 20px);
+            span {
+                @include fontSize(48px);
+                font-weight: 500;
+            }
+        }
+        .date {
+            display: inline-block;
+            @include margin(15px, 0, 0, 20px);
+        }
+    }
+}
+
+.subWrap__newsView {
+    @include padding(86px,0,0,0);
+    .title {
+        @include padding(0,0,110px,80px);
+        @include fontSize(60px);
+    }
+    .date {
+        text-align: right;
+        @include padding($paddingRight: 80px);
+    }
+    .visualImage {
+        @include margin(31px,0,0,0);
+        img {
+            width: 100%;
+        }
+    }
+    &__content {
+        @include padding(103px,80px,0,80px);
+        ol {
+            li {
+                @include padding(0,0,50px,0);
+                .numTitle {
+                    display: inline-block;
+                    @include fontSize(40px);
+                    font-weight: bold;
+                    @include margin($marginBottom: 50px);
+                }
+                p {
+                    @include margin($marginBottom: 40px);
+                }
+            }
+        }
+    }
+    .prevnext {
+        position: relative;
+        @include margin(0,40px,0,40px);
+        a {
+            display: -webkit-box;
+            width: 100%;
+            @include padding(50px,0,50px,40px);
+            > span {
+                @include margin(0,137px,0,0);
+            }
+            > div {
+                -webkit-box-flex: 1;
+            }
+            &.prev {
+                border-bottom: 1px solid #ececec;
+            }
+            box-sizing: border-box;
+            .text {
+                @include fontSize(32px);
+            }
+            .date {
+                @include fontSize(12px);
+            }
+        }
+    }
+}

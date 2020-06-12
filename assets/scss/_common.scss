@@ -1,0 +1,449 @@
+@charset "utf-8";
+
+/* font */
+@font-face {
+    font-family: "DIN-BoldAlternate";
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/DINAlternateBold.otf") format("opentype"), /* Open Type Font */
+    url("../fonts/DINAlternateBold.woff") format("woff"), /* Modern Browsers */
+    url("../fonts/DINAlternateBold.woff2") format("woff2"); /* Modern Browsers */
+}
+
+@font-face {
+    font-family: "DINCondensed-Bold";
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/din-condensed-bold.otf") format("opentype"), /* Open Type Font */
+    url("../fonts/din-condensed-bold.woff") format("woff"), /* Modern Browsers */
+    url("../fonts/din-condensed-bold.woff2") format("woff2"); /* Modern Browsers */
+}
+
+@font-face {
+    font-family: 'NotoKrR';
+    font-style: normal;
+    font-weight: 300;
+    src: url(../fonts/NotoSansKR-Light.otf) format('opentype'),
+    url(../fonts/NotoSansKR-Light.woff2) format('woff2'),
+    url(../fonts/NotoSansKR-Light.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'NotoKrR';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/NotoSansKR-Regular.otf) format('opentype'),
+    url(../fonts/NotoSansKR-Regular.woff2) format('woff2'),
+    url(../fonts/NotoSansKR-Regular.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'NotoKrR';
+    font-style: normal;
+    font-weight: 500;
+    src: url(../fonts/NotoSansKR-Medium.otf) format('opentype'),
+    url(../fonts/NotoSansKR-Medium.woff2) format('woff2'),
+    url(../fonts/NotoSansKR-Medium.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'NotoKrR';
+    font-style: normal;
+    font-weight: 700;
+    src: url(../fonts/NotoSansKR-Bold.otf) format('opentype'),
+    url(../fonts/NotoSansKR-Bold.woff2) format('woff2'),
+    url(../fonts/NotoSansKR-Bold.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'NotoKrR';
+    font-style: normal;
+    font-weight: 900;
+    src: url(../fonts/NotoSansKR-Black.otf) format('opentype'),
+    url(../fonts/NotoSansKR-Black.woff2) format('woff2'),
+    url(../fonts/NotoSansKR-Black.woff) format('woff');
+}
+
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, textarea, p, blockquote, th, td, input, select, textarea, button, span, em {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 1.4;
+    box-sizing: border-box;
+}
+fieldset, img {
+    border: 0 none;
+    vertical-align: top;
+}
+dl, ul, ol, menu, li {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+input, select, textarea, button {
+    vertical-align: middle;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+button {
+    border: 0 none;
+    background-color: transparent;
+    cursor: pointer;
+}
+body {
+    -webkit-text-size-adjust: none;
+}
+html, body {
+    position: relative;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body, th, td, input, select, textarea, button, div, li, span, p, select, textarea, input, buttoun {
+    font-size: 14px;
+    line-height: 1.4;
+    font-family: 'NotoKrR', 'Malgun Gothic', '맑은 고딕', '돋움', dotum, sans-serif;
+    font-weight: 400;
+    color: #000;
+}
+a {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+a:active, a:hover {
+    text-decoration: none;
+}
+button, input[type='button'], input[type='submit'], input[type='reset'], input[type='file'] {
+    -webkit-appearance: button;
+    border-radius: 0;
+}
+input[type='search']::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+}
+address, caption, cite, code, dfn, em, var {
+    font-style: normal;
+    font-weight: normal;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+article, aside, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+textarea {
+    border: 1px solid #cacaca;
+    padding: 10px;
+}
+caption {
+    display: none;
+    visibility: hidden;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+    font-weight: normal;
+}
+.blind {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
+header {
+    position: relative;
+    padding: 20px 0 0 20px;
+    z-index: 2;
+    .logo {
+        &__svg {
+            width: 62px;
+            height: 32px;
+        }
+    }
+    nav {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        width: 32px;
+        height: 32px;
+        .menu {
+            position: relative;
+            width: 32px;
+            height: 32px;
+            .line {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 32px;
+                height: 32px;
+                border: 2px solid #000;
+            }
+            .word {
+                position: absolute;
+                font-size: 11px;
+                font-weight: 500;
+                &.m {
+                    left: 8px;
+                    top: 4px;
+                }
+                &.e {
+                    right: 8px;
+                    top: 4px;
+                }
+                &.n {
+                    left: 8px;
+                    bottom: 4px;
+                }
+                &.u {
+                    right: 8px;
+                    bottom: 4px;
+                }
+            }
+        }
+    }
+}
+
+@mixin border ($borderSize: 1px,$borderCor: #000) {
+    border: $borderSize solid $borderCor;
+}
+
+.btnWrap {
+    @include margin(0,0,60px,0)
+}
+.btn {
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+    @include border;
+    text-align: center;
+    line-height: 50px;
+}
+
+.layerBg {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    pointer-events:none;
+    background-color:transparent;
+    border:0 solid #f4f4e7;
+    box-sizing:border-box;
+    -webkit-transition:border .3s ease-in, background 0s linear;
+    transition:border .3s ease-in, background 0s linear;
+    z-index:-1;
+}
+.layerWrap {
+    .menuWrap {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+
+        ul {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            margin: -222px 0 0;
+
+            li {
+                a {
+                    display: block;
+                    text-align: center;
+                    @include padding(24px, 0, 24px, 0);
+
+                    span {
+                        @include fontSize(90px);
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+
+        .downPdf {
+            position: absolute;
+            left: 50%;
+            bottom: 25px;
+            margin-left: -77px;
+        }
+    }
+
+    .btnClose {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        width: 32px;
+        height: 32px;
+        border: 2px solid #000;
+
+        &:after, &:before {
+            content: "";
+            position: absolute;
+            top: 6px;
+            left: 13px;
+            width: 3px;
+            height: 16px;
+            background: #000;
+            transform: rotate(135deg);
+        }
+
+        &:after {
+            transform: rotate(45deg);
+        }
+
+        &:before {
+            transform: rotate(135deg);
+        }
+    }
+    .bigText {
+        @include padding(190px,80px,0,80px);
+        @include fontSize(60px);
+        font-weight: 500;
+    }
+    .formWrap {
+        @include padding(50px, 80px, 0, 80px);
+    }
+
+    .input-field {
+        position: relative;
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        @include margin($marginTop: 50px);
+    }
+    label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 0 10px;
+        color: #000;
+        transition: 0.2s all;
+        cursor: text;
+        box-sizing: border-box;
+    }
+    input {
+        width: 100%;
+        border: 0;
+        outline: 0;
+        padding: 0.5rem 10px;
+        @include padding(19px,10px,19px,10px);
+        border-bottom: 1px solid #000;
+        box-shadow: none;
+        color: #000;
+    }
+    input:invalid {
+        outline: 0;
+        // color: #ff2300;
+        //   border-color: #ff2300;
+    }
+    input:focus,
+    input:valid {
+        border-color: #00C691;
+    }
+    input:focus~label,
+    input:valid~label {
+        font-size: 12px;
+        top: -18px;
+        color: #00C691;
+    }
+    .selectWrap {
+        @include margin($marginTop: 50px);
+        border-bottom: 1px solid #000;
+        padding: 0 10px;
+        select {
+            width: 100%;
+            height: 40px;
+            border: 0 none;
+        }
+    }
+    .textArea {
+        @include margin($marginTop: 60px);
+        height: 200px;
+        border-color: #000;
+        width: 100%;
+    }
+
+    .filebox {
+        position: relative;
+        @include padding(0,0,30px,0);
+        input[type="file"] {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip:rect(0,0,0,0);
+            border: 0;
+        }
+        label {
+            position: relative;
+            top: 16px !important;
+            display: inline-block;
+            padding: .5em .75em;
+            color: #999;
+            font-size: inherit;
+            line-height: normal;
+            vertical-align: middle;
+            cursor: pointer;
+            text-indent: -999px;
+            &:after {
+                content: '';
+                @include imageUrl(sub/icon_download,png);
+                background-size: cover;
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: calc(52px /2);
+                height: calc(41px / 2);
+            }
+        }
+        .upload-name {
+            position: absolute;
+            top: 10px;
+            display: inline-block;
+            font-size: inherit;
+            font-family: inherit;
+            line-height: normal;
+            vertical-align: middle;
+            border: 0;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+    }
+
+    .checkboxWrap {
+        position: relative;
+        input
+        label {
+            position: relative;
+        }
+    }
+}
+
+.open .layerBg {
+    border-width:50vh 50vw !important;
+    background-color:#ff0;
+    -webkit-transition:border .3s ease-in, background 0s linear .3s;
+    transition:border .3s ease-in, background 0s linear .3s
+}
