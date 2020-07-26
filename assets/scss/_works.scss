@@ -41,7 +41,7 @@
         }
         &__img {
             position: relative;
-            &:after {
+            /*&:after {
                 content: "";
                 position: absolute;
                 left: 39px;
@@ -49,7 +49,7 @@
                 width: 1px;
                 height: 100%;
                 background: #b3b3b3;
-            }
+            }*/
             @include padding(0,40px,0,40px);
             li {
                 a {
@@ -85,6 +85,14 @@
                             @include fontSize(48px);
                             font-weight: 500;
                         }
+                    }
+                    .line {
+                        position: absolute;
+                        left: 20px;
+                        top: -20px;
+                        width: 1px;
+                        height: 100%;
+                        background: #b3b3b3;
                     }
                 }
             }

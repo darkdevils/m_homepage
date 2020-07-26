@@ -1,6 +1,6 @@
 
 .subWrap__newsList {
-    @include padding(80px, 40px, 0, 40px);
+    @include padding(160px, 40px, 0, 40px);
     &__item {
         @include margin($marginBottom: 150px);
         .img {

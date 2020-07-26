@@ -53,7 +53,7 @@
                 </g>
             </svg>
             <ul class="projectList__img">
-                <li>
+                <li data-aos="fade-up">
                     <a href="#">
                         <div class="img"><img src="../assets/image/temp/works_list01.jpg" alt=""></div>
                         <div class="text">
@@ -64,7 +64,7 @@
                         </div>
                     </a>
                 </li>
-                <li>
+                <li data-aos="fade-up">
                     <a href="#">
                         <div class="img"><img src="../assets/image/temp/works_list02.jpg" alt=""></div>
                         <div class="text">
@@ -75,7 +75,7 @@
                         </div>
                     </a>
                 </li>
-                <li>
+                <li data-aos="fade-up">
                     <a href="#">
                         <div class="img"><img src="../assets/image/temp/works_list03.jpg" alt=""></div>
                         <div class="text">
@@ -87,7 +87,7 @@
                         </div>
                     </a>
                 </li>
-                <li>
+                <li data-aos="fade-up">
                     <a href="#">
                         <div class="img"><img src="../assets/image/temp/works_list04.jpg" alt=""></div>
                         <div class="text">
@@ -99,8 +99,9 @@
                     </a>
                 </li>
             </ul>
+
             <ul class="projectList__text">
-                <li>
+                <li data-aos="fade-up">
                     <span class="year">2020</span>
                     <div class="corporate">
                         <dl>
@@ -113,7 +114,7 @@
                         </dl>
                     </div>
                 </li>
-                <li>
+                <li data-aos="fade-up">
                     <span class="year">2019</span>
                     <div class="corporate">
                         <dl>
@@ -122,7 +123,7 @@
                         </dl>
                     </div>
                 </li>
-                <li>
+                <li data-aos="fade-up">
                     <span class="year">2018</span>
                     <div class="corporate">
                         <dl>
@@ -131,7 +132,7 @@
                         </dl>
                     </div>
                 </li>
-                <li>
+                <li data-aos="fade-up">
                     <span class="year">2017</span>
                     <div class="corporate">
                         <dl>
@@ -144,7 +145,7 @@
         </div>
 
         <!-- Contact XT -->
-        <div class="contactXt">
+        <div class="contactXt" data-aos="fade-up">
             <!--<video src="">
                 <source src="">
             </video>-->
@@ -168,8 +169,14 @@
 </div>
 
 <script src="../static/plugins/jquery/jquery-3.4.1.min.js"></script>
+<script src="../static/plugins/aos/aos.js"></script>
 <script src="../static/plugins/swiper/swiper.js"></script>
+<script src="../static/plugins/TweenMax/TweenMax.min.js"></script>
 <script>
+    AOS.init({
+        duration: 1200,
+        offset: 120,
+    });
     var swiper = new Swiper('.swiperArea .swiper-container', {
         autoplay: {
             delay: 2500,
@@ -178,6 +185,10 @@
         pagination: {
             el: '.swiper-pagination',
         },
+    });
+
+    $(function(){
+        $('.projectList__img a').append('<span class="line"></span>');
     });
 </script>
 </body>

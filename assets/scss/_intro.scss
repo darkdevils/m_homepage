@@ -10,19 +10,27 @@ $black: #000;
     overflow: hidden;
     &__text {
         padding: 0 0 0 40px;
+        @include text-bar(#fff,#ddd);
         &--xt {
             display: inline-block;
             margin: 88px 0 0;
             font-size: 50px;
             font-weight: 600;
+            &.aos-animate {
+                @include animateType(1.1s,1s,0.5s);
+            }
         }
         &--description {
             position: relative;
             margin: 0 0 385px;
             span {
+                display: inline-block;
                 font-size: 30px;
                 font-weight: 100;
-
+                @include text-bar(#fff,#ddd);
+                &.aos-animate {
+                    @include animateType(1.1s,1s,0.5s);
+                }
             }
             &:before {
                 content: "";
@@ -215,11 +223,13 @@ $black: #000;
             &:after {
                 content: '';
                 position: absolute;
-                right: 0;
+                right: 50%;
+                left: 50%;
                 bottom: -10px;
-                width: 100%;
+                width: 0;
                 height: 1px;
                 background: #000;
+                transition: all 3s;
             }
         }
     }
@@ -262,6 +272,18 @@ $black: #000;
     /*& -webkit-keyframes AnimationName 0% {background-position: 0% 50%;}
     & -webkit-keyframes AnimationName 50% {background-position: 100% 50%;}
     & -webkit-keyframes AnimationName 100% {background-position: 0% 50%;}*/
+}
+
+.contactXt.aos-animate {
+    .contactXt__projectLink,.contactXt__applyLink {
+        span {
+            &:after {
+                right: 0;
+                left: 0;
+                width: 100%;
+            }
+        }
+    }
 }
 
 .copyright {

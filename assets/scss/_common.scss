@@ -170,9 +170,13 @@ h1, h2, h3, h4, h5, h6, strong {
 }
 
 header {
-    position: relative;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
     padding: 20px 0 0 20px;
     z-index: 2;
+    box-sizing: border-box;
     .logo {
         &__svg {
             width: 62px;
@@ -366,9 +370,22 @@ header {
         color: #00C691;
     }
     .selectWrap {
+        position: relative;
         @include margin($marginTop: 50px);
         border-bottom: 1px solid #000;
         padding: 0 10px;
+        &:after {
+            content: "";
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            @include imageUrl(sub/icon_selectarrow,png);
+            background-size: cover;
+            width: 9px;
+            height: 7px;
+            margin-top: -3px;
+        }
+
         select {
             width: 100%;
             height: 40px;
@@ -384,6 +401,7 @@ header {
 
     .filebox {
         position: relative;
+        @include margin(30px,0,0,0);
         @include padding(0,0,30px,0);
         input[type="file"] {
             position: absolute;
@@ -397,7 +415,7 @@ header {
         }
         label {
             position: relative;
-            top: 16px !important;
+            top: 5px !important;
             display: inline-block;
             padding: .5em .75em;
             color: #999;
@@ -419,7 +437,7 @@ header {
         }
         .upload-name {
             position: absolute;
-            top: 10px;
+            top: 0;
             display: inline-block;
             font-size: inherit;
             font-family: inherit;
@@ -434,10 +452,76 @@ header {
 
     .checkboxWrap {
         position: relative;
-        input
-        label {
-            position: relative;
+        @include margin(0,0,60px,0);
+        input:valid {
+            border: 0;
+            & ~ label {
+                position: relative;
+                color: #000;
+                top: 0;
+                font-size: 15px;
+                padding: 0;
+                span {
+                    @include fontSize(30px);
+                    border-bottom: 1px solid #000;
+                }
+            }
         }
+        input[type="checkbox"] {  /* 실제 체크박스는 화면에서 숨김 */
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip:rect(0,0,0,0);
+            border: 0
+        }
+        input[type="checkbox"] + label {
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+        input[type="checkbox"] + label:before {  /* 가짜 체크박스 */
+            content: ' ';
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            line-height: 24px;
+            margin: -2px 8px 0 0;
+            text-align: center;
+            vertical-align: middle;
+            background: #fafafa;
+            border: 1px solid #000;
+            box-shadow: 0px 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+        }
+        input[type="checkbox"] + label:active:before,
+        input[type="checkbox"]:checked + label:active:before {
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+        }
+
+        input[type="checkbox"]:checked + label:before {  /* 체크박스를 체크했을때 */
+            content: '';  /* 체크표시 유니코드 사용 */
+            width: 24px;
+            height: 24px;
+            border-color: #000;
+        }
+        input[type="checkbox"]:checked + label:after {
+            content: '';
+            position: absolute;
+            left: 6px;
+            top: 4px;
+            width: 14px;
+            height: 14px;
+            background: #000;
+        }
+    }
+    .downPdf {
+        @include margin(160px,0, 80px,0);
+        text-align: center;
     }
 }
 
@@ -446,4 +530,80 @@ header {
     background-color:#ff0;
     -webkit-transition:border .3s ease-in, background 0s linear .3s;
     transition:border .3s ease-in, background 0s linear .3s
+}
+.mgT35 {margin-top: 35px !important;}
+.mgT40 {margin-top: 40px !important;}
+
+.layerWrap {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    z-index: 10;
+    transition: .5s ease;
+    transform: translate(100%, 0);
+}
+.layerWrap.on {
+    transform: translate(0, 0);
+}
+
+@mixin text-bar($color,$beforeCor) {
+    &:before,&:after {
+        content: "";
+        top: 0;
+        bottom: 0;
+        display: inline-block;
+        position: absolute;
+    }
+    &:before {
+        //background: #00C691;
+        background: $beforeCor;
+        width: 100%;
+    }
+    &:after {
+        background: $color;
+    }
+}
+
+@mixin animateType($transtionTime,$animationTime,$delay) {
+    &:before {
+        right: 0;
+        width: 0;
+        -webkit-transition: width $transtionTime ease-in-out;
+        transition: width $transtionTime ease-in-out;
+        transition-delay: $delay;
+    }
+    &:after {
+        -webkit-animation: typo01-after $animationTime ease-in-out;
+        animation-delay: $delay;
+    }
+}
+
+@-webkit-keyframes typo01-after {
+    0% {
+        left: 0;
+        width: 0;
+    }
+    50% {
+        width: 100%;
+    }
+    to {
+        right: 0;
+        width: 0;
+    }
+}
+@keyframes typo01-after {
+    0% {
+        left: 0;
+        width: 0;
+    }
+    50% {
+        width: 100%;
+    }
+    to {
+        right: 0;
+        width: 0;
+    }
 }

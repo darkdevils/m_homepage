@@ -3,7 +3,27 @@
 @mixin temp($imageW , $imageNum) {
     #{$imageW}: $imageNum;
 }
-.pages {
+header {
+    * {
+        transition: .5s ease;
+    }
+    &.active {
+        * {
+            color: #fff;
+
+            path {
+                fill: #fff;
+            }
+        }
+        nav .menu .line {
+            border-color: #fff;
+        }
+    }
+}
+.mainSwiper {
+    .swiper-wrapper {
+        height: 100vh;
+    }
     .section {
         .img img {width: 100%;}
         &:nth-child(1) {
@@ -15,20 +35,189 @@
         }
         &:nth-child(2) {
             background: #000;
-            .section__body {
-                height: 100%;
-                * {color: #fff;}
-                .bx-wrapper {
-                    height: 100%;
+            * {color: #fff;}
+            .growingSwiper {
+                .swiper-slide {
+                    @include padding(230px,0, 0, 0);
+                    .timeBarWrap {
+                        position: relative;
+                        display: inline-block;
+                        margin: 0 0 0 63px;
+                        top: -10px;
+                        width: calc(372px / 2);
+                        height: 1px;
+                        .bar {
+                            position: relative;
+                            display: block;
+                            width: 0;
+                            height: 1px;
+                            z-index: 2;
+                        }
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            left:0;
+                            top: 0;
+                            width: 100%;
+                            height: 1px;
+                            background: #808080;
+                        }
+                    }
+
                 }
-                strong {
-                    font-size: 42px;
-                    font-weight: 500;
+                .text {
+                    @include padding(0, 60px, 0, 60px);
+                    strong {
+                        @include fontSize(84px);
+                        font-weight: 500;
+                        span {
+                            @include fontSize(42px);
+                            font-weight: 200;
+                        }
+                    }
+                    p {
+                        @include fontSize(24px);
+                        @include padding(40px,0,0,127px);
+                        line-height: 20px;
+                    }
+                }
+                .item1 {
+                    @include imageUrl(main/main_growing01,png);
+                    background-position: left bottom;
+                    background-size: contain;
+                    .timeBarWrap {
+                        .bar {
+                            background: #3a44ca;
+                        }
+                    }
+                }
+                .item2 {
+                    @include imageUrl(main/main_growing02,png);
+                    background-position: right bottom;
+                    background-size: contain;
+                    .timeBarWrap {
+                        .bar {
+                            background: #00C691;
+                        }
+                    }
+                }
+            }
+            &.swiper-slide-active {
+                .swiper-slide {
+                    &-active {
+                        .timeBarWrap .bar {
+                            width: 100%;
+                            transition: 5s ease-in;
+                        }
+                    }
                 }
             }
         }
         &:nth-child(3) {
             background: #fff;
         }
+        &:nth-child(4) {
+            background: #00C691 url(../image/sub/view_xt.png) no-repeat left bottom;
+            -webkit-background-size: contain;
+            background-size: contain;
+            .title {
+                display: inline-block;
+                @include padding(190px,0,0,80px);
+                @include fontSize(26px);
+                color: #fff;
+            }
+            sapn, strong {
+                color: #fff;
+            }
+            .stableWrap__text {
+                position: relative;
+                @include padding(38px,0,0,80px);
+                z-index: 2;
+                strong {
+                    @include fontSize(50px);
+                    line-height: 1.6em;
+                    font-weight: 700;
+                    i {
+                        font-style: normal;
+                    }
+                }
+                a {
+                    display: inline-block;
+                    @include padding(38px,0,0,0);
+                    color: #fff;
+                }
+            }
+            .img1 {
+                position: absolute;
+                right: calc(130px / 2);
+                bottom: calc(285px / 2);
+                img {
+                    width: calc(198px / 2);
+                }
+            }
+            .img2 {
+                position: absolute;
+                right: -25px;
+                bottom: calc(204px / 2);
+                img {
+                    width: calc(214px / 2);
+                }
+            }
+            .img3 {
+                position: absolute;
+                right: calc(82px / 2);
+                bottom: calc(165px / 2);
+                img {
+                    width: calc(251px / 2);
+                }
+            }
+
+        }
+        &.swiper-slide {
+            height: 100% !important;
+            .contactXt {
+                @include margin(110px,60px,0,60px);
+            }
+        }
+    }
+    .listSwiper {
+        &:after,&:before {
+            content: '';
+            position: absolute;
+            left :0;
+        }
+        &:before {
+            background: #25bba8;
+            top: 0;
+            width: 100%;
+            height: 50%;
+        }
+        &:after {
+            background: #fe9b36;
+            bottom: 0;
+            width: 100%;
+            height: 50%;
+        }
+        .swiper-slide {
+            height: auto;
+        }
+    }
+}
+
+@mixin text-bar($color,$beforeCor) {
+    &:before,&:after {
+        content: "";
+        top: 0;
+        bottom: 0;
+        display: inline-block;
+        position: absolute;
+    }
+    &:before {
+        //background: #00C691;
+        background: $beforeCor;
+        width: 100%;
+    }
+    &:after {
+        background: $color;
     }
 }

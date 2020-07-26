@@ -7,6 +7,7 @@
 .subWrap--life {
     position: relative;
     background: var(--subWrap-life);
+    overflow: hidden;
     * {
         color: var(--life-font-color);
     }
@@ -41,6 +42,16 @@
             background-size: cover;
             width: calc( 99px / 2 );
             height: calc( 99px / 2 );
+            visibility: hidden;
+            opacity: 0;
+        }
+        &.aos-animate {
+            &:after {
+                opacity: 1;
+                visibility: visible;
+                transition: .5s ease;
+                transition: all .5s 1.3s;
+            }
         }
     }
 }
@@ -49,6 +60,7 @@
         position: absolute;
         .big {
             position: relative;
+            display: inline-block;
             @include fontSize(107px);
             font-weight: bold;
             color: #FFE232;
@@ -89,27 +101,42 @@
         }
     }
     .lifeText {
-        @include margin(370px,0,0,0);
-        @include padding(0,20px,0,0);
+        @include padding(370px,20px,0,0);
         text-align: right;
         span {
             position: relative;
-        }
-        * {
+            display: inline-block;
+            @include text-bar(#FFE232,#00C691);
             @include fontSize(40px);
             font-weight: bold;
             line-height: 1.7em;
         }
         em {
             position: relative;
-            &:after {
+            color: #fff;
+            @include fontSize(40px);
+            font-weight: bold;
+            z-index: -1;
+            &:before {
                 content: "";
                 position: absolute;
                 left: 0;
+                right: 100%;
                 bottom: 0;
-                width: 100%;
-                height: 1px;
-                background: #fff;
+                border-top: 1px solid #fff;
+                visibility: hidden;
+            }
+        }
+        &.aos-animate {
+            span {
+                @include animateType(1.1s,1s,0.5s);
+            }
+            em {
+                &:before {
+                    visibility: visible;
+                    right: 0;
+                    transition: all .5s 1.3s;
+                }
             }
         }
     }
@@ -130,14 +157,29 @@
             background: #C7CBD9;
             width: calc(586 * var(--vwSize));
             height: calc(280 * var(--vwSize));
-            &:after {
-                content: "";
-                position: absolute;
-                right: calc(-26 * var(--vwSize));
-                top: 0;
-                width: calc(26 * var(--vwSize));
-                height: calc(280 * var(--vwSize));
-                background: #FFE232;
+            transform: translate(-120%, 0);
+            transition: .5s ease;
+        }
+        &__animateBoxYellow {
+            position: absolute;
+            right: 71px;
+            top: 88px;
+            width: calc(26 * var(--vwSize));
+            height: calc(280 * var(--vwSize));
+            background: #FFE232;
+            transition: .5s ease;
+            opacity: 0;
+            z-index: -1;
+        }
+        &.aos-animate {
+            .videoPhoto__animateBox {
+                transform: translate(0, 0);
+                transition: .7s ease;
+            }
+            .videoPhoto__animateBoxYellow {
+                opacity: 1;
+                transform: translate(15px, 0);
+                transition: all .5s 0.8s;
             }
         }
     }
@@ -175,7 +217,7 @@
     .swiperArea {
         position: relative;
         height: calc(700 * var(--vwSize));
-        @include padding(0,80px,0,80px);
+        @include padding(0,84px,0,84px);
         .border {
             position: absolute;
             width: calc(560 * var(--vwSize));
@@ -338,6 +380,7 @@
                 &.ceo-cto {
                     @include margin(126px,0,0,0);
                     strong {
+                        position: relative;
                         float: right;
                     }
                 }
@@ -351,6 +394,9 @@
                     transition: .5s ease;
                 }
                 &.planner {
+                    strong {
+                        position: relative;
+                    }
                     .positionBar {
                         right: 0;
                         background: #3742DB;
@@ -359,6 +405,7 @@
                 }
                 &.designer {
                     strong  {
+                        position: relative;
                         float: right;
                     }
                     .positionBar {
@@ -368,6 +415,9 @@
                     }
                 }
                 &.publisher {
+                    strong {
+                        position: relative;
+                    }
                     .positionBar {
                         right: 0;
                         background: #AF45D5;
@@ -375,6 +425,9 @@
                     }
                 }
                 &.develover {
+                    strong {
+                        position: relative;
+                    }
                     .positionBar {
                         left: 0;
                         background: #AF45D5;
