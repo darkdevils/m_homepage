@@ -123,3 +123,657 @@
         }
     }
 }
+
+.subWrap--view {
+	header {
+		.logo__svg {
+			fill: #fff;
+		}
+		nav .menu  {
+			.line {
+				border-color: #fff;
+			}
+			span {
+				color: #fff;
+			}
+		}
+	}
+}
+/* HANWHA */
+.workView {
+	overflow: hidden;
+	.visualImage {
+		position: relative;
+		.img {
+			img {
+				width: 100vw;
+				height: 100vh;
+			}
+		}
+		.textLogo {
+			position: absolute;
+			top: 50%;
+			width: 100%;
+			text-align: center;
+			z-index: 2;
+			img {
+				width: calc(100% / 2);
+				margin-top: -22px;
+			}
+		}
+	}
+	&__bigText {
+		padding: 60px 40px 50px;
+		font-size: 25px;
+		font-weight: bold;
+	}
+	.grayText {
+		color: #999999;
+		line-height: 1.6;
+	}
+	&__overview {
+		padding: 0 40px;
+		h2.title {
+			margin-bottom: 30px;
+			font-weight: bold;
+		}
+		dl {
+			dt {
+				font-size: 18px;
+				font-weight: bold;
+				margin-bottom: 13px;
+			}
+			dd {
+				margin-bottom: 40px;
+				color: #999;
+			}
+		}
+		&--resort {
+			padding: 60px 0 0;
+			h2.title {
+				padding: 0 40px;
+				font-size: 18px;
+				font-weight: bold;
+				margin-bottom: 10px;
+			}
+		}
+	}
+	&__mission {
+		padding: 80px 40px 0;
+		@include imageUrl(sub/workview_mission,jpg);
+		background-size: 100%;
+		h2.title {
+			font-weight: bold;
+			margin-bottom: 30px;
+		}
+		.text {
+			margin-bottom: 80px;
+			font-size: 25px;
+			font-weight: 700;
+			line-height: 1.6;
+		}
+		dl {
+			dt {
+				margin-bottom: 12px;
+				font-size: 18px;
+				font-weight: 700;
+			}
+			dd {
+				margin-bottom: 40px;
+				color: #999;
+				line-height: 1.6;
+			}
+		}
+	}
+	&__concept {
+		padding: 80px 40px;
+		@include imageUrl(sub/workview_concept,jpg);
+		background-size: 100%;
+		h2.title {
+			margin-bottom: 40px;
+			color: #fff;
+			font-weight: 700;
+		}
+		.text {
+			color: #fff;
+			font-size: 40px;
+			font-weight: 700;
+			text-align: center;
+			span {
+				color: #2771F1;
+				font-size: 40px;
+				font-weight: 700;
+			}
+		}
+	}
+	&__compnent {
+		padding: 80px 0 0;
+		h2.title {
+			padding: 0 0 13px 40px;
+			font-size: 18px;
+			font-weight: 700;
+		}
+		.text {
+			color: #999;
+			margin-bottom: 40px;
+			padding: 0 40px;
+			line-height: 1.6;
+		}
+		.imgLeft {
+			margin-bottom: 15px;
+			padding: 0 40px 0 0;
+			img {
+				width: 100%;
+			}
+		}
+		.imgRight {
+			padding: 0 0 40px 40px;
+			img {
+				width: 100%;
+			}
+		}
+		.txtStyle {
+			display: flex;
+			justify-content: space-around;
+			padding: 0 0 13px;
+			span {
+				display: flex;
+			}
+			&--medium {
+				span {
+					font-weight: 500;
+				}
+			}
+			&--bold {
+				span {
+					font-weight: 700;
+				}
+			}
+		}
+	}
+	&__product {
+		padding: 80px 0 0;
+		background: #F5F6F9;
+		h2.title {
+			font-size: 25px;
+			font-weight: bold;
+			padding: 0 0 22px 40px;
+		}
+		strong {
+			display: inline-block;
+			padding: 0 40px 12px;
+			font-size: 18px;
+			font-weight: 500;
+		}
+		p {
+			padding: 0 40px 50px;
+			color: #444;
+		}
+		ul {
+			display: flex;
+			justify-content: space-between;
+			padding: 0 20px;
+			li {
+				img {
+					width: 100%;
+				}
+			}
+		}
+		.imgWrap {
+			position: relative;
+			height: 300px;
+			.imgLeft {
+				width: 354px;
+				img {
+					width: 100%;
+				}
+			}
+			.imgRight {
+				position: absolute;
+				right: -30px;
+				top: 53%;
+				width: 318px;
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+	&__aquaLayout {
+		padding: 350px 0 0;
+		.title {
+			display: block;
+			padding: 0 40px 12px;
+			font-size: 18px;
+			font-weight: 500;
+		}
+		.text {
+			padding: 0 40px;
+			color: #999;
+			line-height: 1.6;
+		}
+		.img {
+			padding: 20px 0 0;
+			img {
+				width: 170%;
+				transform: translate(-260px, 0);
+			}
+		}
+		.contentType01 {
+			padding: 80px 0 0;
+			strong {
+				display: block;
+				font-size: 25px;
+				font-weight: bold;
+				padding: 0 40px 22px;
+			}
+			span {
+				display: block;
+				padding: 0 40px 12px;
+				font-size: 18px;
+				font-weight: 400;
+			}
+			p {
+				padding: 0 40px;
+				color: #999;
+				line-height: 1.6;
+			}
+			.imgCol {
+				padding: 20px 0 0;
+				img {
+					width: 100%;
+				}
+			}
+			.imgCol2 {
+				margin-top: -50px;
+				img {
+					width: 100%;
+				}
+			}
+		}
+		.contentType02 {
+			padding: 70px 0 0;
+			strong {
+				display: block;
+				font-size: 25px;
+				font-weight: 700;
+				padding: 0 40px 22px;
+			}
+			span {
+				display: block;
+				font-size: 18px;
+				padding: 0 40px;
+				margin-bottom: 10px;
+			}
+			p {
+				padding: 0 40px 22px;
+				color: #999;
+				line-height: 1.6;
+			}
+			&__img {
+				display: flex;
+				> div {
+					position: relative;
+					img {
+						width: 150%;
+					}
+					&.leftImg {
+						left: -26%;
+
+					}
+					&.rightImg {
+						top: 60px;
+						right: 0;
+					}
+				}
+			}
+		}
+		.contentType03 {
+			padding: 178px 0 0;
+			.title {
+				display: block;
+				font-size: 25px;
+				font-weight: 700;
+
+			}
+			span {
+				display: block;
+				margin-bottom: 12px;
+				padding: 0 40px;
+				font-size: 16px;
+			}
+			p {
+				padding: 0 40px 22px;
+				color: #999;
+				line-height: 1.6;
+			}
+			.img {
+				img {
+					width: 160%;
+					transform: translate(-30px, 0);
+				}
+			}
+		}
+		.contentType04 {
+			position: relative;
+			padding: 80px 0 0;
+			&:after {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 300%;
+				background: #ebedf3;
+				transform: rotate(-63deg) translate(112%);
+				z-index: -1;
+			}
+			&:before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 30%;
+				width: 100%;
+				height: 100%;
+				background: #ebedf3;
+				z-index: -1;
+			}
+			.title {
+				display: block;
+				font-size: 25px;
+				font-weight: 700;
+
+			}
+			span {
+				display: block;
+				margin-bottom: 12px;
+				padding: 0 40px;
+				font-size: 16px;
+			}
+			p {
+				padding: 0 40px 22px;
+				color: #999;
+				line-height: 1.6;
+			}
+			.imgType01 {
+				position: relative;
+				left: -27%;
+				img {
+					width: 160%;
+				}
+			}
+			.imgType02 {
+				position: relative;
+				left:-20px;
+				img {
+					width: 110%;
+				}
+			}
+		}
+	}
+	&__nextproject {
+		position: relative;
+		img {
+			width: 100%;
+		}
+		.nextProject {
+			position: absolute;
+			left: 20px;
+			top: 15px;
+			font-size: 12px;
+			font-weight: bold;
+			color: #fff;
+		}
+		.title {
+			position: absolute;
+			left: 0;
+			top: 50%;
+			width: 100%;
+			text-align: center;
+			font-size: 18px;
+			font-weight: 700;
+			color: #fff;
+			padding: 0;
+			margin-top: -12px;
+		}
+	}
+	+ .copyright {
+		height: 70px;
+		background: #000;
+		color: #707070;
+		padding: 26px 0 0;
+	}
+
+	&__designStrategy {
+		margin-bottom: 40px;
+		padding: 40px 0 0;
+		.img {
+			margin-bottom: 20px;
+			padding: 0 20px;
+			img {
+				width: 100%;
+			}
+		}
+		.imgList {
+			img {
+				position: relative;
+				left: -97%;
+				width: 300%;
+			}
+		}
+	}
+	&__homelayout {
+		.grayText {
+			margin-bottom: 50px;
+		}
+		.img {
+			position: relative;
+			padding: 0 0 50px 10px;
+			&:after {
+				content: "";
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				height: 250px;
+				background: #56C9CF;
+				z-index : -2;
+			}
+			img {
+				width: 100%;
+			}
+			.bgCircel1 {
+				position: absolute;
+				right: -50px;
+				top: -40px;
+				background: #39D7DF;
+				opacity: 0.23;
+				width: 141px;
+				height: 141px;
+				border-radius: 141px;
+				z-index: -1;
+			}
+			.bgCircel2 {
+				position: absolute;
+				left: -10px;
+				bottom: 35px;
+				background: #FFF4BC;
+				width: 56px;
+				height: 56px;
+				border-radius: 56px;
+				z-index: -1;
+			}
+		}
+	}
+	&__reservation {
+		position: relative;
+		padding: 80px 0 0;
+		&:after {
+			content:"";
+			position: absolute;
+			right: 20px;
+			top: 5px;
+			width: 35px;
+			height: 35px;
+			border-radius: 35px;
+			background: #C9CFEE;
+		}
+		&:before {
+			content:"";
+			position: absolute;
+			left: -10px;
+			top: 45px;
+			width: 75px;
+			height: 75px;
+			border-radius: 75px;
+			background: #D1F6F8;
+			z-index : -1;
+		}
+		.img {
+			img {
+				position: relative;
+				width: 190%;
+				left: -35%;
+			}
+		}
+		.bgCircel {
+			position: absolute;
+			left: -60px;
+			bottom: 0;
+			width: 170px;
+			height: 170px;
+			border-radius: 170px;
+			background: #FFE565;
+			opacity: 0.43;
+			z-index : -1;
+		}
+	}
+
+	&__storygram {
+		position: relative;
+		margin-top: 20px;
+		.grayText {
+			margin-bottom: 45px;
+		}
+		.imgWrap {
+			display: flex;
+			margin-bottom: 80px;
+			padding: 0 10px;
+			@include imageUrl(sub/bg_circle,png);
+			background-size: cover;
+			background-position: center;
+			img {
+				width: 100%;
+			}
+			.imgLeft {
+				margin-top: 82px;
+			}
+		}
+	}
+	&__icongraphy {
+		background-color: #3BC4CB;
+		padding: 70px 40px 80px;
+		.workViewTitle {
+			color: #fff;
+			padding: 0 0 20px !important;
+		}
+		.img {
+			img {
+				width: 100%;
+			}
+		}
+	}
+	&__resort {
+		position: relative;
+		padding: 75px 0 0;
+		&:after {
+			content: "";
+			position: absolute;
+			left: -145vw;
+			top: 74vw;
+			background: #ddedee;
+			width: 400%;
+			height: 200%;
+			z-index: -1;
+			transform: rotate(11deg);
+		}
+		.grayText {
+			margin-bottom: 30px;
+		}
+		.img {
+			margin-bottom: 40px;
+			text-align: center;
+			img {
+				width: 239px;
+			}
+		}
+		.imgWrap {
+			display: flex;
+			padding: 0 20px;
+			img {
+				width: 100%;
+			}
+			.imgLeft {
+				margin-right: 12px;
+				div {
+					margin-bottom: 23px;
+				}
+			}
+			.imgRight {
+				position: relative;
+				top: 165px;
+			}
+		}
+	}
+	&__membership {
+		position: relative;
+		z-index: 2;
+		&:after {
+			content: "";
+			position: absolute;
+			left: -50%;
+			top: -9vw;
+			width: 200%;
+			height: 115%;
+			background: #fff;
+			transform: rotate(11deg);
+			z-index: -1;
+		}
+		.grayText {
+			margin-bottom: 45px;
+		}
+		&__img01 {
+			margin-bottom: 50px;
+			img {
+				position: relative;
+				width: 200%;
+				left: -25%;
+			}
+		}
+		&__img02 {
+			padding: 0 20px;
+			img {
+				width: 100%;
+			}
+		}
+	}
+	&__resortList {
+		margin: 0 0 -200px;
+		padding: 160px 20px 0;
+		img {
+			width: 100%;
+		}
+	}
+
+	.grayText {
+		padding: 0 40px;
+		line-height: 1.6;
+		letter-spacing: -1px;
+	}
+	.workViewTitle {
+		font-size: 18px;
+		font-weight: bold;
+		margin-bottom: 10px;
+		padding: 0 40px;
+	}
+}

@@ -110,6 +110,9 @@
             @include fontSize(40px);
             font-weight: bold;
             line-height: 1.7em;
+	        &:after {
+		        height: 31px;
+	        }
         }
         em {
             position: relative;
@@ -145,7 +148,7 @@
         @include padding(176px,0,0,0);
         &__image {
             position: absolute;
-            left: -21px;
+            left: 0;
             bottom: 0;
             z-index: 1;
             img {
@@ -155,17 +158,17 @@
         &__animateBox {
             position: relative;
             background: #C7CBD9;
-            width: calc(586 * var(--vwSize));
-            height: calc(280 * var(--vwSize));
+            width: 293px;
+            height: 140px;
             transform: translate(-120%, 0);
             transition: .5s ease;
         }
         &__animateBoxYellow {
             position: absolute;
-            right: 71px;
+            left: 277px;
             top: 88px;
-            width: calc(26 * var(--vwSize));
-            height: calc(280 * var(--vwSize));
+            width: 15px;
+            height: 140px;
             background: #FFE232;
             transition: .5s ease;
             opacity: 0;
@@ -359,6 +362,7 @@
     .xtMember {
         &__team {
             overflow: hidden;
+	        padding: 0 0 25px;
             &__position {
                 position: relative;
                 display: block;
@@ -449,6 +453,26 @@
                     height: calc(260 * var(--vwSize));
                     background: #38E1B3;
                 }
+	            &.planner {
+		            > div {
+						background-color: #559DF2;
+		            }
+	            }
+	            &.designer {
+		            > div {
+			            background-color: #31E8B7;
+		            }
+	            }
+	            &.publisher {
+		            > div {
+			            background-color: #B884F2;
+		            }
+	            }
+	            &.develover {
+		            > div {
+			            background-color: #FFEA68;
+		            }
+	            }
                 .photo {
                     position: relative;
                     width: 100%;
@@ -478,6 +502,7 @@
                     @include margin(0,0,-50px,0);
                     .animationBar {
                         left: 0;
+	                    text-align: right;
                         &:after {
                             left :0;
                         }
@@ -489,7 +514,7 @@
                     @include margin(0,0,-50px,0);
                     .animationBar {
                         right: 0;
-                        text-align: right;
+                        text-align: left;
                         &:after {
                             right :0;
                         }
@@ -500,7 +525,7 @@
     }
 
     .xtsienLifeText {
-        @include padding(182px, 0 ,0 , 80px);
+        @include padding(160px, 0 ,0 , 80px);
         .title {
             position: relative;
             display: block;
