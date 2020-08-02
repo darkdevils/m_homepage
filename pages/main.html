@@ -30,9 +30,11 @@
         <div class="swiper-wrapper">
             <!-- 동영상 화면 -->
             <div class="section swiper-slide">
-                <!-- 동영상 나오는 부분 이미지로 대처중 -->
-                <div class="img"><img src="../assets/image/temp/visual_them01.png" alt=""></div>
-                <!-- //동영상 나오는 부분 이미지로 대처중 -->
+                <div class="videoWrap">
+                    <video autoplay loop muted id="myVideo">
+                        <source src="../assets/mov/xt_video.mp4" type="video/mp4">
+                    </video>
+                </div>
             </div>
             <!-- //동영상 화면 -->
 
@@ -42,16 +44,34 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide item1">
                             <div class="text" data-aos="fade-right">
-                                <strong>GROWING<br>XT <span>Expert X Empathetic </span></strong>
+                                <strong>GROWING</strong><br><strong>XT</strong>
+                                <span class="smallText">Expert X Empathetic </span>
                                 <span class="timeBarWrap"><span class="bar"></span></span>
-                                <p>우리는 당신 고객을 가장 잘 알고 싶습니다<br>열린사고로 미리 판단하지 않고<br>당신 고객의 입장에서 생각하고 공감하며<br>가장 당신 고객다운 모습을 집요하게 분석하고<br> 이성적인 분석을 바탕으로 창의적이면서도<br>논리적인 UIUX 설계합니다 </p>
+                                <p>우리는 당신 ; 고객을 가장 잘 알고 싶습니다 <br>열린사고로 미리 판단하지 않고<br>당신 ; 고객의 입장에서 생각하고 공감하며<br>가장 당신 ; 고객다운 모습을 집요하게 분석하고<br>이성적인 분석을 바탕으로 창의적이면서도<br>논리적인 UIUX 설계합니다.</p>
                             </div>
                         </div>
                         <div class="swiper-slide item2">
                             <div class="text" data-aos="fade">
-                                <strong>GROWING<br>XT <span>Growth X Flexible</span></strong>
+                                <strong>GROWING</strong><br><strong>XT</strong>
+                                <span class="smallText">Growth X Flexible</span>
                                 <span class="timeBarWrap"><span class="bar"></span></span>
-                                <p>우리는 당신 고객을 가장 잘 알고 싶습니다<br>열린사고로 미리 판단하지 않고<br>당신 고객의 입장에서 생각하고 공감하며<br>가장 당신 고객다운 모습을 집요하게 분석하고<br> 이성적인 분석을 바탕으로 창의적이면서도<br>논리적인 UIUX 설계합니다 </p>
+                                <p>우리는 새로운 것에 유연합니다.<br>​새로운 것을 유연하게 만나고 경험하여<br>많은 것을 알게 되고 자라지만<br>우리에 시선은 항상 새로운 곳을 향하여 있어<br>멈추지 않고 ​또 다시 지속적으로 탐구하고<br>그려 냅니다.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide item3">
+                            <div class="text" data-aos="fade">
+                                <strong>GROWING</strong><br><strong>XT</strong>
+                                <span class="smallText">​Stable X Pleasure</span>
+                                <span class="timeBarWrap"><span class="bar"></span></span>
+                                <p>XT 가족 전부가 조화를 이루며<br>안정적인 성장계획을 이루어 나아가<br>행복한 미래가 그려간다.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide item4">
+                            <div class="text" data-aos="fade">
+                                <strong>GROWING</strong><br><strong>XT</strong>
+                                <span class="smallText">​Mature X Craftsmanship</span>
+                                <span class="timeBarWrap"><span class="bar"></span></span>
+                                <p>XT는 책임감 있는 프로젝트 진행으로<br>고객의 신뢰를 쌓아가며<br>사랑받는 기업이 된다.</p>
                             </div>
                         </div>
                     </div>
@@ -104,9 +124,14 @@
                         <source src="">
                     </video>-->
                     <!-- 임시 이미지로 사용중 -->
-                    <div class="videoImg"><img src="../assets/image/temp/video_sample_img.jpg" alt=""></div>
+                    <div class="videoImg">
+                        <!--<img src="../assets/image/temp/video_sample_img.jpg" alt="">-->
+                        <video autoplay loop muted id="myVideo2">
+                            <source src="../assets/mov/web_bottom_video.mp4" type="video/mp4">
+                        </video>
+                    </div>
                     <!-- /임시 이미지로 사용중 -->
-                    <strong>당신 다움을 함께 탐험할<br>엑스티가 기다리고 있어요</strong>
+                    <strong><span>당신 다움을 함께 탐험할</span><br><span>엑스티가 기다리고 있어요</span></strong>
                     <a href="#" class="contactXt__link">Contact XT &gt;</a>
                     <a href="#" class="contactXt__projectLink"><span>Project Request</span></a>
                     <a href="#" class="contactXt__applyLink"><span>Creer Apply</span></a>
@@ -128,6 +153,7 @@
     <div class="menuWrap">
         <button type="button" class="btnClose"><span class="blind">닫기</span></button>
         <ul>
+            <li><a href="#"><span>Home</span></a></li>
             <li><a href="#"><span>XT</span></a></li>
             <li><a href="#"><span>Works</span></a></li>
             <li><a href="#"><span>XTSIEN Life</span></a></li>
@@ -152,7 +178,6 @@
             offset: 120,
         });
         var swiper = new Swiper('.mainSwiper.swiper-container', {
-
             slidesPerView: 1,
             direction: 'vertical',
             //initialSlide:3,
@@ -166,13 +191,15 @@
 
         //Horizontal
         var swiperH = new Swiper('.growingSwiper', {
+            effect: 'fade',
+            direction: 'vertical',
             slidesPerSlide:1,
-            loop: true,
+            //loop: true,
             allowTouchMove: true,
             updateOnImagesReady: true,
-            autoplay: {
+            /*autoplay: {
                 delay: 5000,
-            }
+            }*/
         });
         swiper.on('slideChange',function(index) {
             /*console.log(swiper.activeIndex);*/

@@ -62,9 +62,11 @@
             </div>
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="../assets/image/temp/img01.jpg" alt="">test1</div>
-                    <div class="swiper-slide"><img src="../assets/image/temp/img01.jpg" alt="">test2</div>
-                    <div class="swiper-slide"><img src="../assets/image/temp/img01.jpg" alt="">test3</div>
+                    <div class="swiper-slide"><img src="../assets/image/sub/life_swiper01.jpg" alt="">test1</div>
+                    <div class="swiper-slide"><img src="../assets/image/sub/life_swiper02.jpg" alt="">test2</div>
+                    <div class="swiper-slide"><img src="../assets/image/sub/life_swiper03.jpg" alt="">test3</div>
+                    <div class="swiper-slide"><img src="../assets/image/sub/life_swiper04.jpg" alt="">test3</div>
+                    <div class="swiper-slide"><img src="../assets/image/sub/life_swiper05.jpg" alt="">test3</div>
                 </div>
             </div>
             <div class="swiper-pagination"></div>
@@ -99,7 +101,7 @@
                     </span>
                     </div>
                     <div class="xtMember__team__photo__type2">
-                        <div class="photo"><img src="../assets/image/photo/cto.png" alt="이사 송의택"></div>
+                        <div class="photo cto"><img src="../assets/image/photo/cto.png" alt="이사 송의택"></div>
                         <span class="animationBar">
                             <span class="name">송의택</span>
                         </span>
@@ -159,12 +161,12 @@
                             <span class="name">성혜연</span>
                         </span>
                     </div>
-                    <!--<div class="xtMember__team__photo__type1">
+                    <div class="xtMember__team__photo__type1">
                         <div class="photo"><img src="../assets/image/photo/design03.png" alt="사원 박세나" style="width: 75%;"></div>
                         <span class="animationBar">
                             <span class="name">박세나</span>
                         </span>
-                    </div>-->
+                    </div>
                 </div>
                 <!-- //DESIGNER -->
 
@@ -284,15 +286,20 @@
         </div>
 
         <!-- Contact XT -->
-        <div class="contactXt">
+        <div class="contactXt" data-aos="fade-up" data-aos-offset="300">
             <!--<video src="">
                 <source src="">
             </video>-->
             <!-- 임시 이미지로 사용중 -->
-            <div class="videoImg"><img src="../assets/image/temp/video_sample_img.jpg" alt=""></div>
+            <div class="videoImg">
+                <!--<img src="../assets/image/temp/video_sample_img.jpg" alt="">-->
+                <video autoplay loop muted id="myVideo2">
+                    <source src="../assets/mov/web_bottom_video.mp4" type="video/mp4">
+                </video>
+            </div>
             <!-- /임시 이미지로 사용중 -->
-            <strong>당신 다움을 함께 탐험할<br>엑스티가 기다리고 있어요</strong>
-            <a href="#" class="contactXt__link">Contact XT &gt;</a>
+            <strong ><span>당신 다움을 함께 탐험할</span><br><span>엑스티가 기다리고 있어요</span></strong>
+            <a href="#" class="contactXt__link" >Contact XT &gt;</a>
             <a href="#" class="contactXt__projectLink"><span>Project Request</span></a>
             <a href="#" class="contactXt__applyLink"><span>Creer Apply</span></a>
             <svg xmlns="http://www.w3.org/2000/svg" width="1071.715" height="626.108" viewBox="0 0 1071.715 626.108">
@@ -326,7 +333,7 @@
     });
 
     // Random Images
-    var images = ['life_img1.png','life_img2.png','life_img3.png','life_img4.png','life_img5.png','life_img6.png','life_img7.png','life_img8.png',]
+    var images = ['life_img1.png','life_img2.png','life_img3.png','life_img4.png','life_img5.png','life_img6.png','life_img7.png','life_img8.png','life_img9.png']
     var size = images.length;
     var x = Math.floor(size*Math.random())
     document.querySelector('.videoPhoto__image img').src = '../assets/image/sub/'+ images[x];

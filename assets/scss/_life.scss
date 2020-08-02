@@ -223,10 +223,10 @@
         @include padding(0,84px,0,84px);
         .border {
             position: absolute;
-            width: calc(560 * var(--vwSize));
-            height: calc(700 * var(--vwSize));
+            width: calc(575 * var(--vwSize));
+            height: calc(690 * var(--vwSize));
             left: 50%;
-            margin: 0 0 0 calc((-560 * var(--vwSize)) / 2) ;
+            margin: 0 0 0 calc((-575 * var(--vwSize)) / 2);
             z-index: 2;
             span {
                 display: block;
@@ -267,11 +267,16 @@
         }
         .swiper-container {
             position: relative;
-            height: calc(700 * var(--vwSize));
+            height: calc(690 * var(--vwSize));
+	        .swiper-slide {
+		        img {
+			        width: 100%;
+		        }
+	        }
         }
         .swiper-pagination {
             right: calc(134 * var(--vwSize));
-            bottom: -4px;
+            bottom: 0;
             &-bullet {
                 width:  15px;
                 height: 25px;
@@ -482,6 +487,12 @@
                         bottom: 0;
                         width: 100%;
                     }
+	                &.cto {
+		                img {
+			                right: 0;
+			                width: 80%;
+		                }
+	                }
                 }
                 .animationBar {
                     position: absolute;
