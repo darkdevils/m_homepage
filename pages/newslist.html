@@ -28,7 +28,7 @@
     </header>
 
     <div class="subWrap__newsList">
-         <div class="subWrap__newsList__item">
+         <div class="subWrap__newsList__item" data-aos="fade-up" >
              <div class="img"><img src="../assets/image/sub/newslist_item01.jpg" alt=""></div>
              <div class="title">
                  <span>한화리조트 모바일앱</span><br>
@@ -36,7 +36,7 @@
              </div>
              <span class="date">2020.03.02</span>
          </div>
-        <div class="subWrap__newsList__item">
+        <div class="subWrap__newsList__item" data-aos="fade-up" >
             <div class="img"><img src="../assets/image/sub/newslist_item02.jpg" alt=""></div>
             <div class="title">
                 <span>2020년 코로나바이러스에</span><br>
@@ -44,14 +44,14 @@
             </div>
             <span class="date">2020.02.12</span>
         </div>
-        <div class="subWrap__newsList__item">
+        <div class="subWrap__newsList__item" data-aos="fade-up" >
             <div class="img"><img src="../assets/image/sub/newslist_item03.jpg" alt=""></div>
             <div class="title">
                 <span>상반기 엑스티 결산 자료</span>
             </div>
             <span class="date">2020.02.12</span>
         </div>
-        <div class="subWrap__newsList__item">
+        <div class="subWrap__newsList__item" data-aos="fade-up" >
             <div class="img"><img src="../assets/image/sub/newslist_item04.jpg" alt=""></div>
             <div class="title">
                 <span>공통 업무 메뉴얼 작성</span><br>
@@ -59,7 +59,7 @@
             </div>
             <span class="date">2020.02.12</span>
         </div>
-        <div class="subWrap__newsList__item">
+        <div class="subWrap__newsList__item" data-aos="fade-up" >
             <div class="img"><img src="../assets/image/sub/newslist_item05.jpg" alt=""></div>
             <div class="title">
                 <span>엑스티가 일하는 방식</span><br>
@@ -67,7 +67,7 @@
             </div>
             <span class="date">2020.02.12</span>
         </div>
-        <div class="subWrap__newsList__item">
+        <div class="subWrap__newsList__item" data-aos="fade-up" >
             <div class="img"><img src="../assets/image/sub/newslist_item06.jpg" alt=""></div>
             <div class="title">
                 <span>KB차차차 3.0 오픈 및</span><br>
@@ -75,7 +75,7 @@
             </div>
             <span class="date">2020.02.12</span>
         </div>
-        <div class="subWrap__newsList__item">
+        <div class="subWrap__newsList__item" data-aos="fade-up" >
             <div class="img"><img src="../assets/image/sub/newslist_item08.jpg" alt=""></div>
             <div class="title">
                 <span>연말 엑스티 워크샵 안내</span>
@@ -85,7 +85,7 @@
     </div>
 
     <!-- Contact XT -->
-    <div class="contactXt">
+    <div class="contactXt" data-aos="fade-up" data-aos-offset="300">
         <!--<video src="">
             <source src="">
         </video>-->
@@ -97,7 +97,7 @@
             </video>
         </div>
         <!-- /임시 이미지로 사용중 -->
-        <strong>당신 다움을 함께 탐험할<br>엑스티가 기다리고 있어요</strong>
+        <strong ><span>당신 다움을 함께 탐험할</span><br><span>엑스티가 기다리고 있어요</span></strong>
         <a href="#" class="contactXt__link">Contact XT &gt;</a>
         <a href="#" class="contactXt__projectLink"><span>Project Request</span></a>
         <a href="#" class="contactXt__applyLink"><span>Creer Apply</span></a>
@@ -111,6 +111,13 @@
 </div>
 
 <script src="../static/plugins/jquery/jquery-3.4.1.min.js"></script>
+<script src="../static/plugins/aos/aos.js"></script>
 <script src="../static/plugins/swiper/swiper.js"></script>
+<script>
+    AOS.init({
+        duration: 1200,
+        offset: 120,
+    });
+</script>
 </body>
 </html>

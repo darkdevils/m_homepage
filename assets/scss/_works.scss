@@ -3,10 +3,23 @@
     .subWrap__works__text {
         @include padding(177px,0,0,80px);
         span, i {
+	        position: relative;
             @include fontSize(40px);
             font-weight: 700;
             line-height: 1.8em;
+	        @include text-bar(#000,#fff);
         }
+	    &.aos-animate {
+		    span,i {
+			    @include animateType(1.1s,1s,0.5s);
+		    }
+		    i:after {
+			    -webkit-animation: none;
+			    visibility: visible;
+			    right: 0;
+			    transition: all .5s 1.5s;
+		    }
+	    }
         i {
             position: relative;
             font-style: normal;
@@ -14,10 +27,12 @@
                 content: "";
                 position: absolute;
                 left: 0;
+	            right: 100%;
                 bottom: 0;
-                width: 100%;
-                height: 1px;
+	            top: auto;
+	            border-top: 1px solid #000;
                 background: #000;
+				visibility: hidden;
             }
         }
     }

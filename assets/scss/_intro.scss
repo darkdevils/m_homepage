@@ -9,27 +9,29 @@ $black: #000;
 .subWrap__intro {
     overflow: hidden;
     &__text {
-        padding: 0 0 0 40px;
-        @include text-bar(#fff,#ddd);
+        margin: 0 0 0 40px;
+	    @include text-bar(#000,#fff);
         &--xt {
             display: inline-block;
-            margin: 88px 0 0;
+            margin: 88px 0 0 40px;
             font-size: 50px;
             font-weight: 600;
             &.aos-animate {
+	            height: 58px;
                 @include animateType(1.1s,1s,0.5s);
             }
         }
         &--description {
             position: relative;
-            margin: 0 0 385px;
+            margin: 0 0 385px 40px;
             span {
                 display: inline-block;
                 font-size: 30px;
                 font-weight: 100;
-                @include text-bar(#fff,#ddd);
+                @include text-bar(#000,#fff);
                 &.aos-animate {
                     @include animateType(1.1s,1s,0.5s);
+	                height: 35px;
                 }
             }
             &:before {
