@@ -397,8 +397,10 @@ header {
 	            &__link,&__projectLink,&__applyLink {
 		            @include text-bar(#000, transparent);
 	            }
-	            &:before {
-		            bottom: 8px;
+	            .videoImg {
+		            &:before {
+			            bottom: 24px;
+		            }
 	            }
             }
 	        &.swiper-slide-active {

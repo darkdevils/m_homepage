@@ -1,0 +1,30 @@
+{
+  "name": "m_homepage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bxslider": "^4.2.14",
+    "nunjucks": "^3.2.1"
+  },
+  "devDependencies": {
+    "css-loader": "^3.5.3",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0",
+    "gulp-sass": "^4.1.0",
+    "sass-loader": "^8.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darkdevils/m_homepage.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/darkdevils/m_homepage/issues"
+  },
+  "homepage": "https://github.com/darkdevils/m_homepage#readme"
+}
